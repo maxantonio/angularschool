@@ -19,13 +19,22 @@ table tr:nth-child(even) {
 <body >
 <div ng-app="myApp" ng-controller="customersCtrl">
 
+<div>
+<p>Buscar:<input ng-model="query"/></p></br>
+<select ng-model="orderProp">
+  <option value="name">Nombre</option>
+  <option value="Country">Pais</option>
+</select></br>
+</div>
+
+<div>
 <table>
-  <tr ng-repeat="x in names | orderBy : 'Country'">
+  <tr ng-repeat="x in names | filter:query | orderBy:orderProp">
     <td>{{ x.Name }}</td>
     <td>{{ x.Country | uppercase}}</td>
   </tr>
 </table>
-
+</div>
 </div>
 
 <script src="angular/js/angular.min.js"></script>
@@ -34,6 +43,7 @@ var app = angular.module('myApp', []);
 app.controller('customersCtrl', function($scope, $http) {
     $http.get("http://www.w3schools.com/website/Customers_mysql.php")
     .success(function (response) {$scope.names = response;});
+    $scope.orderProp = 'name';
 });
 </script>
 </body>
