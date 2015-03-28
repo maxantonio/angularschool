@@ -1,0 +1,47 @@
+<html ng-app="myFireApp">
+<head>
+<title>Hello world!</title>
+
+</head>
+ <body ng-controller="SampleCtrl">
+ <table>
+ <thead>
+   <tr >
+    <th>Simbolo</th>
+    <th>Precio</th>
+    <th>date</th>
+    <th>Time</th>
+    <th>min</th>
+    <th>max</th>
+    <th>volumen</th>
+ </tr>
+ </thead>
+  <tr ng-repeat="x in datos">
+    <td>{{ x.simbolo }}</td>
+    <td>{{ x.date }}</td>
+    <td>{{ x.time }}</td>
+    <td>{{ x.min }}</td>
+    <td>{{ x.max }}</td>
+    <td>{{ x.volumen }}</td>
+ </tr>
+</table>
+{{$datos}}
+<script src="angular/js/angular.min.js"></script>
+
+<!-- Firebase -->
+<script src="firebase/firebase.js"></script>
+
+<!-- AngularFire -->
+<script src="angular/js/angularfire.min.js"></script>
+<script type="text/javascript">
+  var app = angular.module("myFireApp", ["firebase"]);
+
+  app.controller("SampleCtrl", function($scope, $firebaseArray) {
+    var ref = new Firebase("https://lethaltest.firebaseio.com/intradia_precio");
+    $scope.datos = $firebaseArray(ref);
+     
+  }); 
+</script>
+</body>
+</html>
+

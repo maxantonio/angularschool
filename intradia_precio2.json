@@ -1,0 +1,95 @@
+{
+  "intradia_precio": [
+    {
+      "MAXCOMCPO": 
+        {
+          "precio": "0",
+       
+          "date": "0",
+       
+          "min": "0",
+       
+          "max": "0",
+        
+          "volumen": "0"
+        }
+      
+    },
+    {
+      "GISSAA": 
+        {
+          "precio": "0"
+        ,
+        
+          "date": "0"
+        ,
+        
+          "min": "0"
+        ,
+        
+          "max": "0"
+        ,
+        
+          "volumen": "0"
+        }
+      
+    },
+    {
+      "CYDSASAA": 
+        {
+          "precio": "0"
+        ,
+        
+          "date": "0"
+        ,
+        
+          "min": "0"
+        ,
+        
+          "max": "0"
+        ,
+        
+          "volumen": "0"
+        }
+      
+    },
+    {
+      "%5EMXX": 
+        {
+          "precio": "0"
+        ,
+        
+          "date": "0"
+        ,
+        
+          "min": "0"
+        ,
+    
+          "max": "0"
+        ,
+        
+          "volumen": "0"
+        }
+      
+    },
+    {
+      "TERRA13": 
+        {
+          "precio": "0"
+        ,
+        
+          "date": "0"
+        ,
+        
+          "min": "0"
+        ,
+        
+          "max": "0"
+        ,
+        
+          "volumen": "0"
+        }
+      
+    }
+  ]
+}
